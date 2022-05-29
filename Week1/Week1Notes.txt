@@ -1,0 +1,22 @@
+Summary of my readings for week 1 (Reading Notes)
+Syllabus
+The course contains content to give students the skills required to create web applications using HTML, CSS, and JavaScript without the aid of third-party frameworks or libraries. The resources required for this course are: Doing Stuff with Web Things which is available in pdf and as a zip file on GitHub, HTML5 & CSS3 for the Real World: 2nd Edition (HCRW), and JavaScript: novice to ninja which are available as part of SitePoint’s premium subscription, Google Chrome Web Browser, and, A GitHub account and Git setup on my computer. A good text editor like VS Code is also important. In this course, I will use technologies to solve problems. I will learn to find, evaluate, and select solutions to those same problems by creating Single Page Web applications. There is no group project but I would work as part of a learning group. Evaluation points have been created for this course which consists of personal explorations and projects. The course consists of activities that can be categorized into explorative phases and challenges. The explorative phase comprises readings that help to become familiar with the programming concepts in this class while challenges are ideas for programs that I would come up with. The purpose of the challenges is to help me deeply explore the programming concepts that I learned in the exploration phases. At the end of each challenge, I would be evaluated by my instructor to determine where I am in the accomplishment of the course objectives. At midterm and the end of the semester, I would turn in a ranking of myself with my portfolio as a backup.
+
+Portfolio
+I went ahead to create a repository for my portfolio on GitHub. I already had a GitHub account so I only created a new repository and an index.html file that would be used to record my progress in this course. Input and Output are called IO, Input-Output
+This is a link to my portfolio
+https://oluwakemi-richard.github.io/WDD330Repo/root/index.html
+
+
+Local Storage
+For there to be true communication it must be bidirectional therefore, the user has to be able to communicate with the page. When an application is stopped, anything it has been working on is gone unless the application is designed to store what it has done.  JavaScript local storage uses key-value pairs to store values that can be retrieved by the user even after they have left the page. I practiced the code in the reading to use local storage in saving and retrieving user input and here is a screenshot
+ 
+
+Mobile UX
+Design for the smallest, least powerful device first as it helps focus on the content and core functionality. There are some downsides to mobile-first but a lot more upsides. One downside is that it is time-consuming and costly to do a full rebuild. Mobile-first addresses constraints like size and bandwidth issues. When we go with mobile-first, we are planning for the future and ready for growth.
+Observe what users are doing and find a way to fulfill their needs. Three things you can do are to be there, be useful and be quick
+We need to rewire our brains and be empathetic toward users’ needs.
+Placement matters.
+Perception matters
+Make it simple so people can use it easily.
+Question: Are there other alternatives to local storage in saving users’ inputs.

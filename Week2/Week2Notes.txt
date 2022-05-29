@@ -1,0 +1,51 @@
+Summary of my readings for week 2 (Reading Notes)
+Programming Basics
+This was a revision for me and it refreshed my memory of the basics of JavaScript programming. JavaScript uses the keywords const and let to declare variables. The keyword const is used when the variable will not be reassigned to another value, whereas let is used if the variable might be reassigned later in the program. 
+Arrays, Logic, and Loops
+Arrays in JavaScript can be created in different ways.
+One way is to simply assign square brackets to a variable.
+const myArray = [];
+  Another way is to use an array construction function
+const myArray = new Array();
+We can create an empty array and we can also assign values to it while creating it. Arrays have different properties and methods. Properties describe while methods perform a function. 
+A set is a data structure that represents a collection of unique values, so it cannot include any duplicate values.
+An empty set is created using the new operator and Set () constructor:
+const list = new Set();
+Values can be placed into a set using the add method and multiple values can be added.
+list.add(2).add(3).add(4);
+While Loop: This is the structure for a while loop.
+while (condition) {// do something}
+do ... while Loops: A do ... while loop is similar to a while loop. The only difference is that the condition comes after the block of code. Here is the syntax:
+do {    do something} while(condition)
+For Loops
+For loops are probably the most common type of loop used in JavaScript, and have the following syntax:
+for (initialization ; condition ; after) { do something }
+Functions
+There are three common ways to declare a function which are :
+Function Declaration
+function hello(){    console.log('Hello World!');}
+Function Expression
+const goodbye = function(){    console.log('Goodbye World!');};
+Function declarations can be invoked before they are defined because they are hoisted to the top of the scope, but function expressions cannot be invoked until after they are defined.
+Arrow Function
+const square = x => x*x;
+Some advantages of Arrow functions over other ways of declaring functions are:
+•	They are much less verbose than normal function declarations.
+•	Single parameters don't need to be put into parentheses.
+•	The body of the function doesn't need to be placed inside a block if it's only one line.
+•	The return keyword isn't required if the return statement is the only statement in the body of the function.
+•	They don't bind their own value of this to the function
+A function that is passed as an argument to another is known as a callback.
+function sing(song) {
+    console. log(`I'm singing along to ${song}`);
+}
+sing('Let It Go')
+Sandbox Practice
+Looping a triangle
+for (let i = "#"; i.length < 8; i += "#")
+  console.log(i);
+
+Portfolio
+https://oluwakemi-richard.github.io/WDD330Repo/root/index.html
+
+Question: Is it advisable to use callbacks in large projects? Apart from shorter lines of code, do callbacks have a shorter time of execution?

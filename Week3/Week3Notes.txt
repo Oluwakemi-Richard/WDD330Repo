@@ -1,0 +1,54 @@
+Summary of my readings for week 3 (Reading Notes)
+Objects
+Objects are usually created to represent entities of the real world. Actions are represented in JavaScript by functions in properties. A function that is a property of an object is called its method. An object in JavaScript is a self-contained set of related values and functions. It is like a dictionary where one looks up a property name and sees a value or as a database of values. The properties of an object can be accessed using dot notation or bracket notation. e.g. superman.name or superman['name']. Dot notation is much more common, but bracket notation has a few advantages which include it being the only way to access nonstandard property and method names that don’t follow the variable naming rules; it lets us evaluate an expression and use it as the property key. Calling a method is the same as invoking a function, so parentheses need to be placed after the method name and we can call an object, or method using dot or bracket notation e.g. superman.fly() or superman['fly'](). The in-operator can be used to check whether an object has a particular property. The hasOwnProperty () method is used to check can be used to check whether an object has a property that is its own, rather than one that has been inherited from another object. We can loop through all of an object’s properties and methods by using a for-in loop. To access the keys of an object, we can use the Object. Keys () method which will return an array of all the keys of any object that is provided as an argument and we can then iterate over this array.
+for(const key of Object.keys(objectName)) {
+    console.log(key);
+}
+The Object.values () works in the same way, but returns an array of all the object's value
+for(const value of Object.values(objectName)) {
+    console.log(value);
+}
+Any property can be removed from an object using the delete operator. There are nested objects where an object contains other objects. Objects are assigned by reference which means that if a variable is assigned to an object that already exists, it will simply point to the exact same space in memory and any changes made using either reference will affect the same object.
+
+
+
+The RegExp Object
+A regular expression is a pattern that can be used to search strings for matches to the pattern. There are two ways to create a regular expression. The first, and preferred way, is to use the literal notation of writing the regular expression between forward slashes and the second is to create a new instance of the RegExp object using the new operator and a constructor function.
+Object-Oriented Programming
+When we write our code using objects to represent entities, that’s called object-oriented programming, in short: “OOP”.
+The "this" keyword
+To access the object, a method can use the “this” keyword. The value of this is the object “before dot”, the one used to call the method. e.g.
+let user = {
+  name: "John",
+  age: 30,
+  sayHi() {
+    // "this" is the "current object"
+    alert(this.name);
+  }
+};
+user.sayHi(); //outputs John
+"this" is not bound. It can be used in any function, even if it’s not a method of an object. The value of this is evaluated during the run-time, depending on the context.
+The Document Object Model
+The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order, content, and attributes of elements, and even altering how they are styled. The DOM provides several methods that allow us to access any element on a page. These methods will return a node object or a node list, which is an array-like object. These objects can then be assigned to a variable and inspected or modified.
+The getElementById () method returns a reference to the element with a unique id attribute that is given as an argument.
+The getElementsByTagName () method will return a live node list of all the elements with the tag name that is provided as an argument.
+The getElementsByClassName() method will return a live node list of all elements that have the class name that is supplied as an argument.
+The document.querySelector() method allows you to use CSS notation to find the first element in the document that matches a CSS selector provided as an argument. If no elements match, it will return null.
+The document.querySelectorAll() method also uses CSS notation but returns a node list of all the elements in the document that match the CSS query selector. If no elements match, it will return an empty node list.
+The childNodes property is a list of all the nodes that are children of the node concerned. 
+The children property only returns any element nodes that are children of that node, so will ignore any text nodes. The firstChild property returns the first child of a node while the lastChild property returns the last child of a node.
+The getAttribute() method returns the value of the attribute provided as an argument
+The setAttribute can change the value of an element’s attributes and it takes two arguments: the attribute to be changed, and the new value of that attribute.
+A text node can be created using the document.createTextNode() method and it takes a parameter, which is a string containing the text that goes in the node while the appendChild() method will add another node (given as an argument) as a child node.
+
+Events
+Events are another part of the DOM and they are what provide the link between the web page and user interactions. Every time a user interacts with a web page, such as clicking on a link, an event occurs. There are event listeners in JavaScript that lets a program know when an event happens, and the program can then respond appropriately.
+The addEventListener() method is called on a node object.
+There are many types of events, including mouse events e.g. click, mouseup, mousedown; keyboard events e.g. keydown, keypress, keyup; and touch events e.g. touchstart, touchend and touchmove.
+preventDefault() is a method of the event object that can be used inside the callback function to stop the default behavior from happening.
+An event is said to propagate as it moves from one element to another. Event propagation is the order in which the events fire on each element. There are two forms of event propagation: bubbling and capturing. The default behavior is bubbling.
+Bubbling is when the event fires on the element clicked on first, then bubbles up the document tree, firing an event on each parent element until it reaches the root node.
+Capturing starts by firing an event on the root element, then propagates downwards, firing an event on each child element until it reaches the target element that was clicked on.
+An event can be removed using the removeEventListener() method.
+
+Question: In a situation where an element can be accessed by different DOM methods, how does one know the best one to choose?

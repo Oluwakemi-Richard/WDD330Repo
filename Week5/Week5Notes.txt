@@ -1,0 +1,30 @@
+Summary of my readings for week 5 (Reading Notes)
+Errors are caused when something goes wrong in a program and are usually caused by any of the following:
+System error - caused by a problem with the system or external devices 
+Programmer error - caused by incorrect syntax or faulty logic
+User error - happens when the user enters incorrect data.
+Errors are our responsibility as programmers, so we must ensure they are minimized as much as possible and fixed promptly. We also should try to limit user errors by predicting any possible interactions that may throw an error, and ensure they are dealt with in a way that doesn’t negatively affect the user experience.
+Exceptions
+An exception is an error that produces a return value that can then be used by the program to deal with the error. An exception will also produce a stack trace which is a sequence of functions or method calls that lead to the point where the error occurred. A stack trace will work backward from the point at which the error occurred to identify the original function
+Warnings
+A warning can occur if there’s an error in the code that isn't enough to cause the program to crash therefore, the program will continue to run after a warning.
+Strict mode considers coding practices that were previously accepted as just being 'poor style' as actual errors. Writing code in strict mode can also help improve its clarity and speed since it follows conventions and will throw exceptions if any sloppy code practices are used. Strict mode is used by adding the line, 'use strict' to the top of the JavaScript file.
+Linting tools can be used to test the quality of JavaScript code, beyond simply using strict mode. They are designed to highlight any sloppy programming practices or syntax errors and will complain if certain style conventions are not followed. Some examples of linting tools are JS Lint, JS Hint, and ES Lint.
+Debugging is the process of finding out where bugs occur in the code and then dealing with them. The most basic form of debugging is to use the alert () method to show a dialog at certain points in the code. The console.trace() method will log an interactive stack trace in the console. Most modern browsers also have a debugging tool that allows one to set breakpoints in code that will pause it at certain points. The debugger keyword will create a breakpoint in the code that will pause the execution of the code and allow us to see what the program is currently up to. 
+An error object can be created by the host environment when an exception occurs, or it can be created in the code using a constructor function like this:
+const error = new Error();
+Other error objects are: EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError, InternalError
+Error objects have a number of properties which include: name, message, Error, stack.
+The throw statement can be applied to any JavaScript expression, causing the execution of the program to stop. 
+Exception Handling
+When an exception occurs, the program terminates with an error message. These exceptions need to be handled properly rather than have the program crash when they occur. It is possible to handle exceptions gracefully by catching the error and dealing with them appropriately. If we suspect a piece of code will result in an exception, we can wrap it in a try block. The code in the try block will run normally until it reaches an exception, then it enters into the catch block. The exception message is passed in the catch block. A finally block can be added after a catch block and this will always be executed after the try or catch block.
+ try {
+        //do something
+    } catch(error) {
+        // handle error;
+    } finally {
+        //will always run
+    }
+Test-driven development (TDD) is the process of writing tests before any actual code. The workflow of TDD is as follows: Write tests (that initially fail), Write code to pass the tests, Refactor the code, Test refactored code, and Write more tests for new features
+
+Question: In exception handling, possible exceptions are handled. Is there a way for the developer to know all the exceptions and errors that can happen and handle them in the code?

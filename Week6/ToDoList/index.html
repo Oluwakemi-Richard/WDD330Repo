@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="task-input">
+                <input type="text" placeholder="Add a new task">
+                <button type="button" id="addBtn"><i class="uil uil-plus"></i></button>
+            </div>
+            <div class="controls">
+                <div class="filters">
+                    <span id="remaining"></span>
+                    <span id="all" class="active">All</span>
+                    <span id="pending">Pending</span>
+                    <span id="completed">Completed</span>
+                </div>
+            </div>
+            <ul class="task-box">
+            </ul>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+Summary of my readings for week 4 (Reading Notes)
+Forms
+Forms are made up of a <form> element that contains form controls such as input fields, select menus, and buttons. The action attribute is the URL to which the form will be submitted so it can be processed on the server-side. There are various ways to element the form elements with JavaScript:
+We could use document.forms with the index of the form we want to return or with the value of the name attribute on the form like this: document.forms[0] or this document.forms['nameValue'] .
+We could also use other html element selectors to access the form. For instance: document.getElementsByTagname('form')[0]
+Form Properties and Methods and Events
+The form.submit() method will submit the form automatically. 
+The form.reset() method will reset all the form controls back to their initial values specified in the HTML.
+The form.action property can be used to set the action attribute of a form, so it’s sent to a different URL to be processed on the server.
+The focus event occurs when an element is focused on. 
+The blur event occurs when the user moves the focus away from the form element. 
+The change event occurs when the user moves the focus away from the form element after changing it.
+Some common types of form control are:
+•	<input> fields, including text, passwords, check boxes, radio buttons, and file uploads
+•	<select> menus for drop-down lists of options
+•	<textarea> elements for longer text entry
+•	<button> elements for submitting and resetting forms
+Form Validation
+Form validation is the process of checking whether a user has entered the information into a form correctly. Validation can occur on the client-side using JavaScript, and on the server-side. It is advisable to use both client-side and server-side validation. 
+A submit button can be disabled to prevent the form from submitting if there are errors.
+function disableSubmit(event) {    if(event.target.value === ''){        document.getElementById('submit').disabled = true;    } else {        document.getElementById('submit').disabled = false;    }}
+Object-Oriented Programming
+There are three main concepts in OOP: encapsulation, polymorphism, and inheritance. 
+Encapsulation -involves keeping all the programming logic inside an object and making methods available to implement the functionality, without the outside world needing to know how it’s done.
+Polymorphism - means various objects can share the same method, but also have the ability to override shared methods with a more specific implementation.
+Inheritance - means we can take an object that already exists and inherit all its properties and methods. We can then improve its functionality by adding new properties and methods.
+Classes - are used to define blueprints for objects. An object is an instance of a class and inherits all the properties and methods of the class.
+Constructor Functions -This is a function that defines the properties and methods of an object. The parentheses are not required when instantiating a new object using a constructor function but are required if any default arguments need to be provided.
+All objects have a constructor property that returns the constructor function that created it.
+const obj2= new obj1.constructor(5);
+The static keyword can be used in class declarations to create a static method.
+All objects ultimately inherit from the prototype of the Object() constructor function.
+Properties of objects in JavaScript are said to be enumerable or non-enumerable. If they aren't enumerable, this means they will not show up when a for-in loop is used to loop through an object’s properties and methods. There is a method called propertyIsEnumerable() that every object has (because it’s a method of Object.prototype) that can be used to check if a property is enumerable.
+object.prototype.propertyIsEnumerable('methodName'); //returns true or false
+A class can inherit from another class using the extends keyword in a class declaration. For example.
+class A { constructor(name) {this.name = name;  }}
+class B extends A {constructor(name) { super(name);}}
+An object property descriptor can have get() and set() methods instead of a value attribute. All objects must have one or the other, they can't have both. The get() and set() methods can be used to control how a property is set using assignment and the value that is returned when a property is queried.
+It’s possible to avoid using classes altogether, and create new objects based on another object that acts as a 'blueprint' or prototype instead. The Object() constructor function has a method called create that can be used to create a new object that is an exact copy of the object that is provided as an argument.
+A mixin is a way of adding properties and methods of some objects to another object without using inheritance. It allows more complex objects to be created by ‘mixing’ basic objects together. It's fuctionality is provided by the Object.assign() method and will assign to the object provided as the first argument all of the properties from any objects provided as further arguments
+It’s possible to borrow methods from objects without having to inherit all their properties and methods. This is done by making a reference to the function that you want to borrow
+const action = obj1.method;
+action.call(obj2);
+
+Modular JavaScript
+A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules. This helps to keep code organized in separate, reusable files, which improves code maintainability. The code in a module should have a single purpose, and group together functions with distinct functionality. 
+The coupling of code refers to how dependent certain elements or modules of code are on each other. Two pieces of code are said to be tightly coupled if one relies on the other to run.
+Some important points about modules are:
+•	All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.
+•	A module has its own global scope, so any variables created at the top level of a module can only be accessed within that module.
+•	The value of this in the top level of a module is undefined, rather than the global object.
+•	You can't use HTML-style comments in modules.
+
+Question: Since objects can be created from other objects and object-based inheritance is also possible, is there an advantage of direct instantiation from a class? Or is it better to create objects from other objects when possible?
+
