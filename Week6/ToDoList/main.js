@@ -13,11 +13,13 @@ filters.forEach(btn => {
 });
 function getRemaining(){
     let rem = []
+    if (todos) {
     todos.forEach(todo => {
         if (todo.status === "pending") {
             rem.push(todo)
         }
     })
+}
     remainingBox.innerHTML = rem.length + " task(s) left"
 }
 getRemaining()
@@ -87,6 +89,8 @@ addingButton.addEventListener("click",e =>{
         todos.push(taskInfo);
         localStorage.setItem("todo-list", JSON.stringify(todos))
         showTodo(all);
+        getRemaining();
+        window.location.reload();
     }
 })
 taskInput.addEventListener("keyup", e=> {
@@ -100,5 +104,7 @@ taskInput.addEventListener("keyup", e=> {
         todos.push(taskInfo);
         localStorage.setItem("todo-list", JSON.stringify(todos))
         showTodo(all);
+        getRemaining();
+        window.location.reload() ;
     }
 })
