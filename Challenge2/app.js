@@ -1,4 +1,4 @@
-import {Auth} from 'auth.js';
+import Auth from './auth.js';
 
 
 const loginBtn = document.getElementById('login_btn');
