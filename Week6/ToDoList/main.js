@@ -90,9 +90,9 @@ addingButton.addEventListener("click",e =>{
         let taskInfo = {name:userTask, status:"pending"};
         todos.push(taskInfo);
         localStorage.setItem("todo-list", JSON.stringify(todos))
-        showTodo(all);
+        showTodo("all");
         getRemaining();
-        window.location.reload();
+        // window.location.reload();
     }
 })
 taskInput.addEventListener("keyup", e=> {
