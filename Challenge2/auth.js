@@ -73,7 +73,7 @@ export default class Auth {
     logIn(){
         if(userName.value == storedName && userPw.value == storedPw){
             // alert('You are logged in.');
-             return window.location.assign("./home.html");
+             return window.location.assign("home.html");
              //window.location.href = "/yes.html";
             
          }else{
