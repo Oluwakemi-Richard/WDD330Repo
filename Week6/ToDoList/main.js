@@ -26,6 +26,7 @@ getRemaining()
 
 function showTodo(filter){
     let li =""
+    debugger;
     if (todos) {
         todos.forEach((todo,id) => {
             let isCompleted = todo.status == "completed"?"checked":"";
@@ -55,7 +56,8 @@ showTodo("all");
 function deleteTask(deleteId) {
     todos.splice(deleteId,1)
     localStorage.setItem("todo-list", JSON.stringify(todos))
-    showTodo();
+    showTodo("all");
+    getRemaining()
 
 }
 function updateStatus(selectedTask) {
