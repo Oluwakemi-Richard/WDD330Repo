@@ -60,7 +60,7 @@ function store(){
 // })
 loginBtn.addEventListener("click", e=>{
     debugger
-    if(userName.value.toLowerCase() == storedName.toLowerCase() && userPw.value == storedPw){
+    if(userName.value == storedName && userPw.value == storedPw){
        // alert('You are logged in.');
         return window.location.assign("./home.html");
         //window.location.href = "/yes.html";
